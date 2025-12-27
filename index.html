@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Finder</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body class="bg-stone-100 text-stone-700 min-h-screen">
+
+  <!-- Header -->
+  <nav class="bg-white border-b border-stone-200 p-6">
+    <h1 class="text-2xl font-light tracking-wide text-center">
+      Recipe Finder
+    </h1>
+  </nav>
+
+  <!-- Search section -->
+  <header class="flex justify-center items-center py-16">
+    <div class="bg-white p-8 rounded-2xl shadow-sm w-full max-w-lg text-center space-y-6">
+
+      <h2 class="text-3xl font-light">
+        Find your recipe
+      </h2>
+
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search recipe (e.g. chicken)"
+        class="w-full border border-stone-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
+      />
+
+      <button
+        id="search-button"
+        class="w-full bg-emerald-700 text-white py-2 rounded-lg hover:bg-emerald-800 transition"
+      >
+        Let’s cook
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Result section -->
+  <main class="max-w-5xl mx-auto px-6 pb-20">
+
+    <div id="no-search-text" class="text-center text-stone-500">
+      <p class="text-lg">You haven’t searched for a recipe yet.</p>
+    </div>
+
+    <div
+      id="recipe-item"
+      class="mt-12 bg-white p-8 rounded-2xl shadow-sm"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+        <img
+          id="recipe-image"
+          class="w-full h-[20rem] object-cover rounded-xl"
+          alt=""
+        />
+
+        <div class="flex flex-col gap-4">
+          <h1 id="recipe-name" class="text-2xl font-light"></h1>
+
+          <p class="text-sm text-stone-500">
+            <b>Category:</b>
+            <span id="recipe-category"></span>
+          </p>
+
+          <p
+            id="recipe-instructions"
+            class="text-sm leading-relaxed text-stone-600"
+          ></p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
