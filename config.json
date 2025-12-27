@@ -1,0 +1,11 @@
+{
+  "appName": "Recipe Finder",
+  "theme": "scandi cozy",
+  "author": "Mila",
+  "version": "1.0",
+  "api": {
+    "name": "TheMealDB",
+    "baseUrl": "https://themealdb.com/api/json/v1/1/"
+  }
+}
+
